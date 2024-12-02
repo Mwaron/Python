@@ -1,7 +1,3 @@
-from itertools import count
-
-from urllib3.packages.six import print_
-
 f = open('Day1')
 sz = f.readlines()
 f.close()
