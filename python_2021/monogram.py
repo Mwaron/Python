@@ -1,0 +1,7 @@
+print("                       *   ")
+print("                      *    ")
+print("**       **         *      ") 
+print("*  *   *  *        * *     ")
+print("*    *    *       *****    ")
+print("*         * *    *     * * ")
+input("Az ablak bezárásához nyomj Entert!")

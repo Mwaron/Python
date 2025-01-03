@@ -1,0 +1,7 @@
+a=input('a=')
+b=input('b=')
+a=int(a)
+b=int(b)
+print("a két szám összege:",a+b)
+print('a két számszorzata:',a*b)
+print("a két szám hatványa:",a**b)
