@@ -1,9 +1,7 @@
-text = ["FFFF","FFFI"]
+s1 = "alma"
 
-i = 0
-while i < len(text):
-    if text[i] == "FFFF":
-        print("FFFF")
-    else:
-        print("FFFI")
-    i += 1
+print(s1)
+
+s1 = s1[0].replace('a','b')
+
+print(s1)
