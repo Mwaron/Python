@@ -93,3 +93,23 @@ egyedek számát (a kifejlett és kölyök egyedek számának összegét)! Ha ne
 feljegyzés, a „Nincs ilyen feljegyzés” szöveget jelenítse meg! Ha nem volt megfigyelt
 egyed vagy számuk nem állapítható meg, a „Nincs információ” szöveget jelenítse meg!
 Amennyiben egy számo'''
+print('\n7. feladat')
+
+day = int(input('Adja meg a nap sorszámát! '))
+radio = int(input('Adja meg a rádióamatőr sorszámát '))
+
+egyedek = 0
+l4 = []
+
+for i, line in enumerate(l1):
+    if line[0] == str(day) and line[1] == str(radio):
+        l4 = l2[i].split(' ')
+        l4 = l4[0].split('/')
+        if len(l4) != 2:
+            print('Nincs ilyen feljegyzés')
+        else:
+            if szame(l4[0]) and szame(l4[1]):
+                print(f"A megfigyelt egyedek száma: {int(l4[0])+int(l4[1])}")
+            else:
+                print('Nincs információ')
+
