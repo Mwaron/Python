@@ -1,7 +1,6 @@
-s1 = "alma"
+nap = '# 01 16'
+print(nap[2:4])
+print(nap[5:7])
 
-print(s1)
-
-s1 = s1[0].replace('a','b')
-
-print(s1)
+t = nap.split(' ')
+print(t[1],t[2])
