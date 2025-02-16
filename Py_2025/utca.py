@@ -56,6 +56,10 @@ else:
 
 
 
+# TODO Megcsinálni az 5 b részét!!!
+
+
+
 
 
 """6. Jelenítse meg az utcakep.txt fájlban a páratlan oldal utcaképét az alábbi mintának
