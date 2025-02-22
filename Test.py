@@ -1,3 +1,2 @@
-s = "K"
-db = 10
-print(s*(db-len(str(db))))
+s = "20190326"
+print(int(s[6:6]))
