@@ -46,7 +46,6 @@ a mintának megfelelően két tizedesjegy pontossággal, százalék formátumban
 a képernyőre!"""
 print('4. feladat')
 
-
 fej = 0
 i = 0
 while i < len(kiserlet):
@@ -129,5 +128,3 @@ f.write("\n")
 for string in dobas:
     f.write(string)
     f.write(" ")
-
-print("The End!")
