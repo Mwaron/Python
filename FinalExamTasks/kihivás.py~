@@ -1,0 +1,53 @@
+# the title "kihívás" is called challenge in english
+"""1. Kérje be és tárolja el a felhasználó heti aktivitását! Feltételezheti, hogy a megadott sorozat
+hossza 250 karakternél rövidebb. """
+print("1. feladat") #Task 1
+
+# ask for the activity
+#activity = input("Adja meg az aktivitását: ")
+activity = "FFFGGGUUUFFFGGKKK"
+
+"""2. Számítsa ki és a mintának megfelelően jelenítse meg a felhasználó aktivitását, azaz a héten
+megtett távolságok összegét! """
+print("2. feladat") #Task 2
+
+all = 0
+
+for i in activity:
+    if i == "G":
+        all += 1
+    elif i == "U":
+        all += 1
+    elif i == "F":
+        all += 2
+    elif i == "K":
+        all += 10
+
+# The whole distance
+print(f"Az elért távolság: {all} km.")
+
+"""3. Amennyiben a felhasználó mindegyik mozgásformát űzte az adott héten, akkor a heti
+teljesítményéhez 10 km pluszt kap! Ha a felhasználó teljesítette ezt a feltételt, írassa ki,
+hogy „Bravó! Jutalma még 10 km.”, különben pedig a „Nem jár jutalom.”
+üzenetet jelenítse meg! """
+print("3. feladat") #Task 3
+
+if "U" in activity and "F" in activity and "K" in activity and "U" in activity:
+    print("Bravó! Jutalma meg 10 km.")
+    all += 10
+else:
+    print("Nem jár jutalom.")
+
+"""4. Írassa ki a képernyőre a felhasználó által gyűjtött kilométerek számát, amely a megtett heti
+távolságérték és a kapott jutalomkilométerek összege! Ha a gyűjtött kilométerek elérik
+a heti kihívásnak megfelelő 40 km-t, akkor a „Gratulálok, kihívás teljesítve!”
+üzenetet jelenítse meg, a minta szerint! Amennyiben nem teljesítette a kitűzött célt,
+a „Legközelebb sikerül!” üzenetet jelenítse meg! """
+print("4. feladat") #Task 4
+
+if all >= 40:
+    challenge = "Gratulálok, kihívás teljesítve!"
+else:
+    challenge = "Legközelebb sikerül!"
+
+print(f"{all} km. {challenge} km.")
