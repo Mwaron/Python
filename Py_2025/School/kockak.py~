@@ -1,0 +1,37 @@
+import random
+"""1. Kérje be a felhasználótól N értékét, vagyis a feldobások számát, és tárolja el a kapott értéket"""
+
+#n = int(input("Hány alkalommal legyen feldobás? "))
+n = 5
+
+"""2. Végezzen N feldobást a három kockával úgy, hogy minden feldobásnál generál három
+véletlenszámot 1 és 6 között! Figyeljen arra, hogy a program futtatása során ne mindig
+ugyanazt a véletlenszám-sorozatot kapja! """
+A = 0
+P = 0
+for i in range(n):
+    s = "Dobás:"
+    ossz = 0
+    for i in range(2):
+        dobas = random.randint(1,6)
+        s += f" {str(dobas)} +"
+        ossz += dobas
+    dobas = random.randint(1,6)
+    ossz += dobas
+    s += f" {str(dobas)}"
+    if ossz < 10:
+        s += f" = {str(ossz)}\t Nyert: Anni"
+        A += 1
+    else:
+        s += f" = {str(ossz)}\t Nyert: Panni"
+        P += 1
+    print(s)
+
+
+
+
+
+
+
+
+#!!!Kiszednui a hashtaget

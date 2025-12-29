@@ -1,0 +1,28 @@
+"""1. A megadott 15 számot tárolja el a program forrásában egy megfelelő adatszerkezetben!
+A 15 szám rendelkezésre áll a tomeg.txt állományban, amelyből a program kódjába
+átmásolható."""
+
+l = [16, 8, 9, 4, 3, 2, 4, 7, 7, 12, 3, 5, 4, 3, 2]
+
+"""2. A tárgyak tömege alapján határozza meg és írassa ki az össztömeget a minta szerint! """
+print("2. feladat")
+print(f'A tárgyak tömegének összege: {sum(l)} kg')
+
+"""3. Határozza meg, hogy hány dobozra van szükség, és ezekben mekkora tömegek lesznek! Az
+eredményeket írassa ki a mintának megfelelően! """
+print('\n3. feladat')
+
+d = 1
+ossz = 0
+s = ''
+for n in l:
+    if ossz + n > 20:
+        s += f'{str(ossz)} '
+        d += 1
+        ossz = n
+    else:
+        ossz += n
+
+s += f'{str(ossz) }'
+print(f"A dobozok tartalmának tömege (kg): {s}")
+print('A szükséges dobozok száma:', d)

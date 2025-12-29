@@ -1,0 +1,35 @@
+import math
+"""1. A megadott 15 számot tárolja el a programban egy megfelelő adatszerkezetben! A 15 szám
+rendelkezésre áll az uvegek.txt állományban, amelyből azok a program kódjába
+átmásolhatók. """
+l = [5, 2, 2, 4, 3, 2, 4, 10, 5, 5, 3, 5, 4, 3, 3 ]
+
+"""2. Kérje be a mintának megfelelően, és tárolja el, hogy Mari néni hány deciliter lekvárt (L)
+főz be, ahol L értéke 0<L200! """
+print("2. feladat")
+
+lekvar = input("Mari néni lekvárja (dl): ")
+
+"""3. Az üvegek űrtartalma alapján határozza meg, hogy a legnagyobb üveg hány deciliteres és
+hányadik a sorban! Ha több ilyen van, akkor az elsőt adja meg! 
+"""
+print("3. feladat")
+ln = 0
+lni = 0
+for i, uveg in enumerate(l):
+    if uveg > ln:
+        ln = uveg
+        lni = i + 1
+
+print(f"A legnagyobb üveg: {ln} dl és {lni}. a sorban. ")
+
+
+"""4. Írassa ki a képernyőre, hogy Mari néni L deciliter befőzött lekvárja elfér-e az üvegekben!
+Ha az üveg mennyiség elegendő, akkor írja ki, hogy „Elegendő üveg volt.”, különben
+azt, hogy „Maradt lekvár.”! """
+print("4. feladat")
+
+if sum(l) >= int(lekvar):
+    print("Elegendő üveg volt.")
+else:
+    print("Maradt lekvár.")
