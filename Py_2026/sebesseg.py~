@@ -58,4 +58,61 @@ def telepulesen(sz):
     return num
 
 
-print(f"Az út {telepulesen(sz)/sz[0][0]*100} százaléka vezet településen belül.")
+print(f"Az út {round(telepulesen(sz)/sz[0][0]*100, 2)} százaléka vezet településen belül.")
+
+""" Olvassa be egy település nevét, és adja meg, hogy a településen belül… hány sebességkorlátozó tábla van; milyen hosszan vezet az út! """
+print("\n5. feladat")
+#telepules = input("Adja meg egy település nevét! ")
+telepules = "Varos010"
+kezdes = False
+vege = False
+t = 0
+
+for line in sz:
+    if line[1] == telepules:
+        kezdes = True
+        KeUt = line[0]
+    elif line[1] == "]" and kezdes:
+        vege = True
+        VeUt = line[0]
+        kezdes = False
+
+    if kezdes and not vege:
+        num = len(line[1])
+        if len(line[1]) == 2:
+            t += 1
+
+
+print(f"A sebességkorlátozó táblák száma: {t}")
+print(f"Az út hossza a településen belül {VeUt-KeUt} méter. ")
+
+
+"""Tavolsagok létrehozása"""
+tavolsagok = []
+v = False
+for line in sz:
+    if line[1] == "]":
+        vege = line[0]
+        v = True
+    elif len(line[1]) >= 4:
+        koviT = line[0]
+        v = False
+        tavolsagok.append(koviT - vege)
+        tavolsagok.append(line[1])
+
+"""Adja meg a beolvasott településhez legközelebb eső település nevét!"""
+print("\n6. feladat")
+for i, line in enumerate(tavolsagok):
+    if line == telepules:
+        telepulesIndex = i
+        break
+
+if telepulesIndex == 1:
+    print(f"A legközelebbi település: {tavolsagok[telepulesIndex + 2]}")
+elif telepulesIndex == len(tavolsagok) - 1:
+    print(f"A legközelebbi település: {tavolsagok[telepulesIndex - 2]}")
+else:
+    if tavolsagok[telepulesIndex-1] >= tavolsagok[telepulesIndex+1]:
+        print(f"A legközelebbi település: {tavolsagok[telepulesIndex-2]}")
+    else:
+        print(f"A legközelebbi település: {tavolsagok[telepulesIndex+2]}")
