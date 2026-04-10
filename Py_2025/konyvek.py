@@ -54,10 +54,7 @@ print('5. feladat')
 print("Év\tMagyar kiadás\tMagyar példányszám\tKülföldi kiadás\tKülföldi példányszám")
 date = 2020
 while date <= 2023:
-    mk = 0
-    mp = 0
-    kk = 0
-    kp = 0
+    mk, mp, kk, kp = 0, 0, 0, 0
     for line in sz:
         if line[0] == date and line[2] == "ma":
             mk += 1
@@ -75,10 +72,7 @@ with open("tabla.html", "w", encoding="UTF-8") as f:
     f.write("<tr><th>Év</th><th>Magyar kiadás</th><th>Magyar példányszám</th><th>Külföldikiadás</th><th>Külföldi példányszám</th></tr> ")
     date = 2020
     while date <= 2023:
-        mk = 0
-        mp = 0
-        kk = 0
-        kp = 0
+        mk, mp, kk, kp = 0, 0, 0, 0
         for line in sz:
             if line[0] == date and line[2] == "ma":
                 mk += 1
